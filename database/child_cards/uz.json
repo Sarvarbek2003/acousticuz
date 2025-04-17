@@ -1,0 +1,79 @@
+[
+    {
+        "id": 1,
+        "img": "/1-150x150.jpg.webp",
+        "title": "Bolalarda eshitish halokati",
+        "text": "Bolada erta yoshda eshitish qobiliyatini yo'qotish belgilarini aniqlash ota-onalar va shifokorlar uchun muhim vazifadir.",
+        "link": ""
+    },
+    {
+        "id": 2,
+        "img": "/2-150x150.jpg.webp",
+        "title": "Bolalarda eshitish qobiliyatini yo'qotish belgilari",
+        "text": "Bola rivojlanishining har bir davri atrof-muhit tovushlariga ma'lum reaktsiyalar bilan tavsiflanadi.",
+        "link": ""
+    },
+    {
+        "id": 3,
+        "img": "/detskaya_tugouhost_kak_oprelelit-150x150.jpg.webp",
+        "title": "Bolada eshitish qobiliyati yo'qligini qanday aniqlash mumkin",
+        "text": "Ota-onalarning asosiy vazifasi - audiolog bilan birgalikda bolaning eshitish qobiliyatini imkon qadar erta aniqlash.",
+        "link": ""
+    },
+    {
+        "id": 4,
+        "img": "/kak_podgotovit.jpg.webp",
+        "title": "Farzandingizni eshitish testiga qanday tayyorlash kerak",
+        "text": "Bolaning yoshi va rejalashtirilgan tekshiruv usuliga qarab, bolani eshitish testiga qanday qilib to'g'ri tayyorlash kerak.",
+        "link": ""
+    },
+    {
+        "id": 5,
+        "img": "/korrekcya_detskoy_tugouhosty_mini-150x150.jpg.webp",
+        "title": "Bolalarda eshitish qobiliyatini yo'qotishni tuzatish",
+        "text": "Bolalarda eshitish qobiliyatining yo'qolishini muvaffaqiyatli tuzatish nutqni normal eshitadigan tengdoshlari bilan teng ravishda rivojlanishiga olib keladi.",
+        "link": ""
+    },
+    {
+        "id": 6,
+        "img": "/5-150x150.jpg.webp",
+        "title": "Bolalarda eshitish korreksiyasining xususiyatlari",
+        "text": "Eshitish buzilishini tuzatish uchun yaxshi eshitish markazlarida yosh bemorlarni boshqarish sxemasi.",
+        "link": ""
+    },
+    {
+        "id": 7,
+        "img": "/6-150x150.jpg.webp",
+        "title": "Erta tashxis muvaffaqiyatli reabilitatsiyaning kalitidir",
+        "text": "Farzandingiz eshitish qobiliyatiga ega emasligiga shubha qilsangiz, vaqtni behuda sarflamaslik kerak.",
+        "link": ""
+    },
+    {
+        "id": 8,
+        "img": "/audioscrining-140x150.jpg.webp",
+        "title": "Bola audio skriningdan o'tmadi, nima qilish kerak?",
+        "text": "Audio skrining oddiy, tez va og'riqsiz test bo'lib, eshitish tizimida patologiya mavjudligini aniqlash imkonini beradi.",
+        "link": ""
+    },
+    {
+        "id": 9,
+        "img": "/9-150x150.jpg.webp",
+        "title": "Eshitish (sinf) nevropatiyasi",
+        "text": "Qanday xavf omillari patologiyaning mavjudligini ko'rsatishi mumkin.",
+        "link": ""
+    },
+    {
+        "id": 10,
+        "img": "/ushnye-infekczii-u-detej-150x150.jpg.webp",
+        "title": "Bolalarda quloq infektsiyalari",
+        "text": "Nima uchun bolalarda otit ommaviy axborot vositalari kattalarga qaraganda tez-tez uchraydi? Bolada quloq og'rig'i borligini qanday tushunish mumkin. Otit ommaviy axborot vositalarini davolash qanday? Quloq infektsiyalari va antibiotiklar.",
+        "link": ""
+    },
+    {
+        "id": 11,
+        "img": "/10-150x150.jpg.webp",
+        "title": "Kichkina bemorlarimizning yutuqlari",
+        "text": "Ushbu bo'lim bolalariga eshitish qobiliyatini yo'qotish tashxisi qo'yilgan ota-onalar uchun mo'ljallangan.",
+        "link": ""
+    }
+]

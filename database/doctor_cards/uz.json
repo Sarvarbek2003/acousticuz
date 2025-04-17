@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "img": "/matveev-300-300.png.webp",
+        "doctorsName": "Matveev Konstantin Nikolaevich",
+        "aboutDoctor": "Bosh audiologiya bo'limi. Audiolog-otolaringolog, I toifa. Kattalar va bolalarni qabul qilish.",
+        "experience": "Ish tajribasi: 2007 yildan beri",
+        "link": ""
+    },
+    {
+        "id": 2,
+        "img": "/surdolog_chicherov.png.webp",
+        "doctorsName": "Chicherov Konstantin Valerievich",
+        "aboutDoctor": "Oliy toifali audiolog-otolaringolog. Kattalar va bolalarni qabul qiladi.",
+        "experience": "Ish tajribasi: 2002 yildan beri",
+        "link": ""
+    },
+    {
+        "id": 3,
+        "img": "/zasenko-300-300.png.webp",
+        "doctorsName": "Zasenko Irina Leonidovna",
+        "aboutDoctor": "Audiolog-otolaringolog, I toifa. Kattalar va bolalarni qabul qiladi.",
+        "experience": "Ish tajribasi: 2000 yildan beri",
+        "link": ""
+    },
+    {
+        "id": 4,
+        "img": "/hairulina-300-300.png.webp",
+        "doctorsName": "Xayrulina Svetlana Ivanovna",
+        "aboutDoctor": "Audiolog-otolaringolog, I toifa. U tug'ilgandan boshlab kattalar va bolalarni qabul qiladi.",
+        "experience": "Ish tajribasi: 2007 yildan beri",
+        "link": ""
+    },
+    {
+        "id": 5,
+        "img": "/moreva-300-300-22.png.webp",
+        "doctorsName": "Moreva Elena Vasilevna",
+        "aboutDoctor": "Oliy toifali audiolog-otolaringolog. Kattalar va bolalarni qabul qiladi.",
+        "experience": "Ish tajribasi: 2004 yildan beri",
+        "link": ""
+    },
+    {
+        "id": 6,
+        "img": "/smolik-300-300.png.webp",
+        "doctorsName": "Smolik Mariya Axmedsheyxovna",
+        "aboutDoctor": "Audiolog-otolaringolog, I toifa. Kattalar va bolalarni qabul qiladi.",
+        "experience": "Ish tajribasi: 2009 yildan beri",
+        "link": ""
+    }
+]
