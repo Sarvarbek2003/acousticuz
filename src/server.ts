@@ -9,6 +9,7 @@ dotenv.config();
 
 const app = express()
 app.use(express.json())   
+app.use(express.static(path.join(process.cwd(), 'files')))
 
 app.use('/api', service)
 app.use('/admin/', admin)
