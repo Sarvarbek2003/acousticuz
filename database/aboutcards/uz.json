@@ -1,42 +1,42 @@
 [
     {
         "id": 1,
-        "img": "/frame-1-8.jpg.webp",
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
         "titleText": "Biz haqimizda",
         "text": "2001 yildan beri biz eshitish qobiliyatini yo'qotgan odamlar manfaati uchun qimmatli manba - eshitishni tiklash va saqlash uchun ishlamoqdamiz.",
         "link": ""
     },
     {
         "id": 2,
-        "img": "/frame-2-9.jpg.webp",
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
         "titleText": "Mutaxassislar",
         "text": "Professionallar jamoasi har kuni eshitish qobiliyati past odamlarga eshitish muammolarini hal qilishga yordam beradi.",
         "link": ""
     },
     {
         "id": 3,
-        "img": "/frame-3-4.jpg.webp",
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
         "titleText": "Uskunalar va texnologiyalar",
         "text": "Markazlarning texnologik jihozlari eshitish xizmatining yuqori standartlariga javob beradi.",
         "link": ""
     },
     {
         "id": 4,
-        "img": "/frame-4-3.jpg.webp",
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
         "titleText": "Bemorlarning sharhlari",
         "text": "Bizning xizmatlarimiz Belarus Respublikasi qonunchiligi talablariga javob beradi.",
         "link": ""
     },
     {
         "id": 5,
-        "img": "/frame-5-10.jpg.webp",
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
         "titleText": "Litsenziyalar va sertifikatlar",
         "text": "Bizning xizmatlarimiz Belarus Respublikasi qonunchiligi talablariga javob beradi.",
         "link": ""
     },
     {
         "id": 6,
-        "img": "/frame-6-6.jpg.webp",
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
         "titleText": "Kontaktlar",
         "text": "Minsk va viloyat shaharlarida har kuni, shu jumladan tushlik va dam olish kunlarida eshitish markazlari ishlaydi.",
         "link": "/centers"

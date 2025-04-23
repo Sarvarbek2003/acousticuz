@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "img": "/matveev-300-300.png.webp",
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
         "doctorsName": "Матвеев Константин Николаевич",
         "aboutDoctor": "Зав. сурдологическим отделением. Врач сурдолог-оториноларинголог I категории. Прием взрослых и детей.",
         "experience": "Стаж работы: с 2007 года",
@@ -9,7 +9,7 @@
     },
     {
         "id": 2,
-        "img": "/surdolog_chicherov.png.webp",
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
         "doctorsName": " Чичеров Константин Валерьевич",
         "aboutDoctor": "Врач сурдолог-оториноларинголог высшей категории. Ведет прием взрослых и детей.",
         "experience": "Стаж работы: с 2002 года",
@@ -17,7 +17,7 @@
     },
     {
         "id": 3,
-        "img": "/zasenko-300-300.png.webp",
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
         "doctorsName": " Засенко Ирина Леонидовна",
         "aboutDoctor": "Врач сурдолог-оториноларинголог I категории. Ведет прием взрослых и детей.",
         "experience": "Стаж работы: с 2002 года",
@@ -25,7 +25,7 @@
     },
     {
         "id": 4,
-        "img": "/hairulina-300-300.png.webp",
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
         "doctorsName": " Хайрулина Светлана Ивановна",
         "aboutDoctor": "Врач сурдолог-оториноларинголог I категории. Ведет прием взрослых и детей с рождения.",
         "experience": "Стаж работы: с 2007 года",
@@ -33,7 +33,7 @@
     },
     {
         "id": 5,
-        "img": "/moreva-300-300-22.png.webp",
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
         "doctorsName": " Морева Елена Васильевна",
         "aboutDoctor": "Врач сурдолог-оториноларинголог высшей категории. Ведет прием взрослых и детей.",
         "experience": "Стаж работы: с 2004 года",
@@ -41,7 +41,7 @@
     },
     {
         "id": 6,
-        "img": "/smolik-300-300.png.webp",
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
         "doctorsName": " Смолик Мария Ахмедшейховна",
         "aboutDoctor": "Врач сурдолог-оториноларинголог I категории. Ведет прием взрослых и детей.",
         "experience": "Стаж работы: с 2009 года",
