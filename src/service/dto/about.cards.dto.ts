@@ -1,14 +1,26 @@
 import { Type } from "class-transformer";
-import { IsOptional, IsString, ValidateNested } from "class-validator";
+import { IsBoolean, IsOptional, IsString, ValidateNested } from "class-validator";
 import { MessageModel } from "./services.dto";
 
 export class CreateAboutCardsDto {
     @IsString()
     img: string;
 
+    @IsBoolean()
+    @IsOptional()
+    main:boolean
+    
+    @IsString()
+    @IsOptional()
+    img_post: string;
+
+    @IsString()
+    @IsOptional()
+    post: string;
+
     @ValidateNested({ each: true })
     @Type(() => MessageModel)
-    titleText: MessageModel;
+    title: MessageModel;
 
     @ValidateNested({ each: true })
     @Type(() => MessageModel)
@@ -23,10 +35,22 @@ export class UpdateAboutCardsDto {
     @IsString()
     img?: string;
 
+    @IsBoolean()
+    @IsOptional()
+    main?:boolean
+    
+    @IsString()
+    @IsOptional()
+    img_post?: string;
+
+    @IsString()
+    @IsOptional()
+    post?: string;
+
     @IsOptional()
     @ValidateNested({ each: true })
     @Type(() => MessageModel)
-    titleText?: MessageModel;
+    title?: MessageModel;
 
     @IsOptional()
     @ValidateNested({ each: true })

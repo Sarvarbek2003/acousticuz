@@ -10,8 +10,8 @@ const addCatalogCard = (req: Request, res: Response, next: NextFunction) => {
     const {
         link,
         img,
-        textKey,
-        titleKey
+        text,
+        title
     } = req.body as CreateCatalogCardsDto
 
     try {
@@ -22,8 +22,8 @@ const addCatalogCard = (req: Request, res: Response, next: NextFunction) => {
             id: result_ru.at(-1).id ? result_ru.at(-1).id + 1 : 1,
             link: link,
             img: img,
-            titleKey: titleKey['ru'],
-            textKey: textKey['ru'],
+            title: title['ru'],
+            text: text['ru'],
         })
         let result_uz = JSON.parse(readFileSync(join(process.cwd(), 'database', 'catalogcards', `uz.json`), 'utf-8'))
 
@@ -31,8 +31,8 @@ const addCatalogCard = (req: Request, res: Response, next: NextFunction) => {
             id: result_uz.at(-1).id ? result_uz.at(-1).id + 1 : 1,
             link: link,
             img: img,
-            titleKey: titleKey['uz'],
-            textKey: textKey['uz'],
+            title: title['uz'],
+            text: text['uz'],
         })
 
         writeFileSync(join(process.cwd(), 'database', 'catalogcards', `ru.json`), JSON.stringify(result_ru, null, 4))
@@ -48,8 +48,8 @@ const updateCatalogCard = (req: Request, res: Response, next: NextFunction) => {
     const {
         link,
         img,
-        titleKey,
-        textKey
+        title,
+        text
     } = req.body as UpdateCatalogCardsDto
 
     const { id } = req.params as unknown as ParamId
@@ -62,16 +62,16 @@ const updateCatalogCard = (req: Request, res: Response, next: NextFunction) => {
         result_ru.map(el => {
             if(el.id == id) {
                 el.img = (img ? img : el.img),
-                el.titleKey = (titleKey ? titleKey['ru'] : el.titleKey)
-                el.textKey = (textKey ? textKey['ru'] : el.textKey)
+                el.title = (title ? title['ru'] : el.title)
+                el.text = (text ? text['ru'] : el.text)
                 el.link = (link ? link : el.link)
             }
         })
         result_uz.map(el => {
             if(el.id == id) {
                 el.img = (img ? img : el.img),
-                el.titleKey = (titleKey ? titleKey['uz'] : el.titleKey)
-                el.textKey = (textKey ? textKey['uz'] : el.textKey)
+                el.title = (title ? title['uz'] : el.title)
+                el.text = (text ? text['uz'] : el.text)
                 el.link = (link ? link : el.link)
             }
         })

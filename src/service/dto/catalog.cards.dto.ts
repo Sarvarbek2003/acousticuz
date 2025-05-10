@@ -9,11 +9,11 @@ export class CreateCatalogCardsDto {
 
     @ValidateNested({ each: true })
     @Type(() => MessageModel)
-    titleKey: MessageModel;
+    title: MessageModel;
 
     @ValidateNested({ each: true })
     @Type(() => MessageModel)
-    textKey: MessageModel;
+    text: MessageModel;
 
     @IsString()
     link: string;
@@ -27,12 +27,12 @@ export class UpdateCatalogCardsDto {
     @IsOptional()
     @ValidateNested({ each: true })
     @Type(() => MessageModel)
-    titleKey?: MessageModel;
+    title?: MessageModel;
 
     @IsOptional()
     @ValidateNested({ each: true })
     @Type(() => MessageModel)
-    textKey?: MessageModel;
+    text?: MessageModel;
 
     @IsOptional()
     @IsString()

@@ -2,50 +2,50 @@
     {
         "id": 1,
         "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
-        "titleKey": "Eshitish vositalari",
-        "textKey": "Dunyo yetakchilari ReSound, Oticon va Widexdan eshitish qobiliyatini yo'qotgan odamlar uchun Daniyadan zamonaviy eshitish vositalarining eng katta katalogi.",
+        "title": "Eshitish vositalari",
+        "text": "Dunyo yetakchilari ReSound, Oticon va Widexdan eshitish qobiliyatini yo'qotgan odamlar uchun Daniyadan zamonaviy eshitish vositalarining eng katta katalogi.",
         "link": ""
     },
     {
         "id": 2,
         "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
-        "titleKey": "Bolalar uchun eshitish vositalari",
-        "textKey": "Daniya Oticon va ReSound zamonaviy bolalar eshitish apparatlari modellarining katta tanlovi - miniatyuradan tortib o'ta kuchli quloq orqasigacha, eshitish qobiliyatining barcha darajalarini tuzatish uchun.",
+        "title": "Bolalar uchun eshitish vositalari",
+        "text": "Daniya Oticon va ReSound zamonaviy bolalar eshitish apparatlari modellarining katta tanlovi - miniatyuradan tortib o'ta kuchli quloq orqasigacha, eshitish qobiliyatining barcha darajalarini tuzatish uchun.",
         "link": ""
     },
     {
         "id": 3,
         "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
-        "titleKey": "Koxlear implantlar",
-        "textKey": "Eshitish qobiliyatini yo'qotganlar uchun eshitish qobiliyatini tiklash uchun Cochlear kompaniyasining aqlli eshitish yechimlari va aksessuarlari.",
+        "title": "Koxlear implantlar",
+        "text": "Eshitish qobiliyatini yo'qotganlar uchun eshitish qobiliyatini tiklash uchun Cochlear kompaniyasining aqlli eshitish yechimlari va aksessuarlari.",
         "link": ""
     },
     {
         "id": 4,
         "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
-        "titleKey": "Eshitish moslamalari uchun batareyalar",
-        "textKey": "Eshitish asboblari va koxlear implantlar uchun barcha o'lchamdagi kuchli, tejamkor va bardoshli batareyalar eng yaxshi narxlarda.",
+        "title": "Eshitish moslamalari uchun batareyalar",
+        "text": "Eshitish asboblari va koxlear implantlar uchun barcha o'lchamdagi kuchli, tejamkor va bardoshli batareyalar eng yaxshi narxlarda.",
         "link": ""
     },
     {
         "id": 5,
         "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
-        "titleKey": "Eshitish vositalarini parvarish qilish mahsulotlari",
-        "textKey": "Katalogda sizning eshitish asboblaringizga muntazam g'amxo'rlik qilish va ularning xizmat muddatini sezilarli darajada uzaytirishda yordam beradigan asboblar va aksessuarlarning to'liq to'plami mavjud.",
+        "title": "Eshitish vositalarini parvarish qilish mahsulotlari",
+        "text": "Katalogda sizning eshitish asboblaringizga muntazam g'amxo'rlik qilish va ularning xizmat muddatini sezilarli darajada uzaytirishda yordam beradigan asboblar va aksessuarlarning to'liq to'plami mavjud.",
         "link": ""
     },
     {
         "id": 6,
         "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
-        "titleKey": "Quloqlar uchun maslahatlar",
-        "textKey": "Silikon va akril materiallardan tayyorlangan yuqori sifatli va ishonchli individual quloq uchlari quloq kanali taassurotiga ko'ra individual ravishda tayyorlanadi.",
+        "title": "Quloqlar uchun maslahatlar",
+        "text": "Silikon va akril materiallardan tayyorlangan yuqori sifatli va ishonchli individual quloq uchlari quloq kanali taassurotiga ko'ra individual ravishda tayyorlanadi.",
         "link": ""
     },
     {
         "id": 7,
         "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
-        "titleKey": "Simsiz aksessuarlar",
-        "textKey": "Simsiz aksessuarlar kundalik vaziyatlarda (televizor ko'rish, haydash, shovqinda gaplashish va h.k.) eshitish vositalarining imkoniyatlarini kengaytiradi va yaxshilaydi.",
+        "title": "Simsiz aksessuarlar",
+        "text": "Simsiz aksessuarlar kundalik vaziyatlarda (televizor ko'rish, haydash, shovqinda gaplashish va h.k.) eshitish vositalarining imkoniyatlarini kengaytiradi va yaxshilaydi.",
         "link": ""
     }
 ]

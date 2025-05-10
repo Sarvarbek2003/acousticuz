@@ -2,84 +2,120 @@
     {
         "id": 1,
         "link": "#",
-        "img": "/frame-18.jpg.webp",
+        "main": true,
+        "img_post": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2024/12/service-baby-1600-100-1536x960.png.webp",
+        "post": "Детские сурдологи сети Центров хорошего слуха – профессионалы, специализирующиеся на обследовании слуха у детей. В отличие от ЛОР-врачей, сурдологи занимаются исключительно проблемами уха и слуха, поэтому в совершенстве владеют всеми современными объективными и субъективными методами диагностики, которые применяются в детском возрасте. На первичной консультации детский сурдолог проведет комплексное обследование слуха, выдаст заключение, и при наличии патологии слуха разработает индивидуальную программу реабилитации слуха у ребенка.",
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
         "title": "Bolalar uchun diagnostika",
         "text": "Yaxshi eshitish markazining mutaxassislari kattalar va tug'ilishdan boshlab bolalarda eshitish qobiliyatini tashxislash va tuzatish bo'yicha to'liq xizmatlarni taqdim etadilar."
     },
     {
         "id": 2,
         "link": "#",
-        "img": "/audiometria-rashirennaya_150.jpg.webp",
+        "main": false,
+        "img_post": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2024/12/service-baby-1600-100-1536x960.png.webp",
+        "post": "Детские сурдологи сети Центров хорошего слуха – профессионалы, специализирующиеся на обследовании слуха у детей. В отличие от ЛОР-врачей, сурдологи занимаются исключительно проблемами уха и слуха, поэтому в совершенстве владеют всеми современными объективными и субъективными методами диагностики, которые применяются в детском возрасте. На первичной консультации детский сурдолог проведет комплексное обследование слуха, выдаст заключение, и при наличии патологии слуха разработает индивидуальную программу реабилитации слуха у ребенка.",
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
         "title": "Kattalar uchun eshitish diagnostikasi",
         "text": "Kattalardagi barcha turdagi eshitish diagnostikasi audiologlar tomonidan ekspert darajasidagi uskunalar yordamida amalga oshiriladi."
     },
     {
         "id": 3,
         "link": "#",
-        "img": "/surdolog-konsultacia-150x150.jpg.webp",
+        "main": true,
+        "img_post": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2024/12/service-baby-1600-100-1536x960.png.webp",
+        "post": "Детские сурдологи сети Центров хорошего слуха – профессионалы, специализирующиеся на обследовании слуха у детей. В отличие от ЛОР-врачей, сурдологи занимаются исключительно проблемами уха и слуха, поэтому в совершенстве владеют всеми современными объективными и субъективными методами диагностики, которые применяются в детском возрасте. На первичной консультации детский сурдолог проведет комплексное обследование слуха, выдаст заключение, и при наличии патологии слуха разработает индивидуальную программу реабилитации слуха у ребенка.",
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
         "title": "Audiolog bilan maslahatlashing",
         "text": "Odolog bilan uchrashuv 30 daqiqadan 1 soatgacha davom etadi va bir necha bosqichda amalga oshiriladi: tekshirish, otoskopiya, eshitish diagnostikasi, eshitish vositalarini tanlash va sozlash."
     },
     {
         "id": 4,
         "link": "#",
-        "img": "/verifikacia.jpg.webp",
+        "main": false,
+        "img_post": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2024/12/service-baby-1600-100-1536x960.png.webp",
+        "post": "Детские сурдологи сети Центров хорошего слуха – профессионалы, специализирующиеся на обследовании слуха у детей. В отличие от ЛОР-врачей, сурдологи занимаются исключительно проблемами уха и слуха, поэтому в совершенстве владеют всеми современными объективными и субъективными методами диагностики, которые применяются в детском возрасте. На первичной консультации детский сурдолог проведет комплексное обследование слуха, выдаст заключение, и при наличии патологии слуха разработает индивидуальную программу реабилитации слуха у ребенка.",
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
         "title": "Eshitish vositalari bilan eshitishni tuzatish",
         "text": "Zamonaviy eshitish vositalaridan foydalangan holda kattalar, bolalar va qariyalarda eshitish qobiliyatini tuzatish va reabilitatsiya qilish."
     },
     {
         "id": 5,
         "link": "#",
-        "img": "/earmould-150x150.jpg.webp",
+        "main": true,
+        "img_post": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2024/12/service-baby-1600-100-1536x960.png.webp",
+        "post": "Детские сурдологи сети Центров хорошего слуха – профессионалы, специализирующиеся на обследовании слуха у детей. В отличие от ЛОР-врачей, сурдологи занимаются исключительно проблемами уха и слуха, поэтому в совершенстве владеют всеми современными объективными и субъективными методами диагностики, которые применяются в детском возрасте. На первичной консультации детский сурдолог проведет комплексное обследование слуха, выдаст заключение, и при наличии патологии слуха разработает индивидуальную программу реабилитации слуха у ребенка.",
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
         "title": "Maxsus quloq maslahatlari",
         "text": "Maxsus quloq qolipidan foydalanish eshitish moslamasining ovozini yanada qulay qiladi va fikr-mulohazalarni hushtak chalish xavfini kamaytiradi."
     },
     {
         "id": 6,
         "link": "#",
-        "img": "/remont_sluhovogo_apparata-150x150.jpg.webp",
+        "main": false,
+        "img_post": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2024/12/service-baby-1600-100-1536x960.png.webp",
+        "post": "Детские сурдологи сети Центров хорошего слуха – профессионалы, специализирующиеся на обследовании слуха у детей. В отличие от ЛОР-врачей, сурдологи занимаются исключительно проблемами уха и слуха, поэтому в совершенстве владеют всеми современными объективными и субъективными методами диагностики, которые применяются в детском возрасте. На первичной консультации детский сурдолог проведет комплексное обследование слуха, выдаст заключение, и при наличии патологии слуха разработает индивидуальную программу реабилитации слуха у ребенка.",
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
         "title": "Eshitish asboblarini ta'mirlash va diagnostika qilish",
         "text": "Eshitish vositalarini ta'mirlash faqat malakali mutaxassis tomonidan original ehtiyot qismlar va butlovchi qismlardan foydalangan holda amalga oshirilishi kerak."
     },
     {
         "id": 7,
         "link": "#",
-        "img": "/priem_inostrannyh_gragdan-150x150.jpg.webp",
+        "main": true,
+        "img_post": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2024/12/service-baby-1600-100-1536x960.png.webp",
+        "post": "Детские сурдологи сети Центров хорошего слуха – профессионалы, специализирующиеся на обследовании слуха у детей. В отличие от ЛОР-врачей, сурдологи занимаются исключительно проблемами уха и слуха, поэтому в совершенстве владеют всеми современными объективными и субъективными методами диагностики, которые применяются в детском возрасте. На первичной консультации детский сурдолог проведет комплексное обследование слуха, выдаст заключение, и при наличии патологии слуха разработает индивидуальную программу реабилитации слуха у ребенка.",
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
         "title": "Chet el fuqarolarini qabul qilish",
         "text": "Yaxshi eshitish markazi boshqa mamlakatlardan bemorlarni Belarus fuqarolari uchun amal qiladigan narxlar ro'yxatiga muvofiq qabul qiladi."
     },
     {
         "id": 8,
         "link": "#",
-        "img": "/online_hearing_test-150x150.jpg.webp",
+        "main": false,
+        "img_post": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2024/12/service-baby-1600-100-1536x960.png.webp",
+        "post": "Детские сурдологи сети Центров хорошего слуха – профессионалы, специализирующиеся на обследовании слуха у детей. В отличие от ЛОР-врачей, сурдологи занимаются исключительно проблемами уха и слуха, поэтому в совершенстве владеют всеми современными объективными и субъективными методами диагностики, которые применяются в детском возрасте. На первичной консультации детский сурдолог проведет комплексное обследование слуха, выдаст заключение, и при наличии патологии слуха разработает индивидуальную программу реабилитации слуха у ребенка.",
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
         "title": "Onlayn eshitish testi",
         "text": "Sizning eshitishingiz yomonlashganini payqadingizmi? Nutqni qanchalik yaxshi eshitishingiz va tushunishingiz mumkinligini aniqlashga yordam beradigan tez va oddiy onlayn testdan o'ting."
     },
     {
         "id": 9,
         "link": "#",
-        "img": "/rassrochka_100-models-150-150.jpg.webp",
+        "main": true,
+        "img_post": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2024/12/service-baby-1600-100-1536x960.png.webp",
+        "post": "Детские сурдологи сети Центров хорошего слуха – профессионалы, специализирующиеся на обследовании слуха у детей. В отличие от ЛОР-врачей, сурдологи занимаются исключительно проблемами уха и слуха, поэтому в совершенстве владеют всеми современными объективными и субъективными методами диагностики, которые применяются в детском возрасте. На первичной консультации детский сурдолог проведет комплексное обследование слуха, выдаст заключение, и при наличии патологии слуха разработает индивидуальную программу реабилитации слуха у ребенка.",
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
         "title": "Eshitish asboblari nasiyaga",
         "text": "Zamonaviy eshitish apparatlari ortiqcha to'lovlarsiz 0% bo'lib-bo'lib, atigi 1 uchrashuvda bank ishtirokida."
     },
     {
         "id": 10,
         "link": "#",
-        "img": "/hearing_test_besplatno_150_150.jpg.webp",
+        "main": false,
+        "img_post": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2024/12/service-baby-1600-100-1536x960.png.webp",
+        "post": "Детские сурдологи сети Центров хорошего слуха – профессионалы, специализирующиеся на обследовании слуха у детей. В отличие от ЛОР-врачей, сурдологи занимаются исключительно проблемами уха и слуха, поэтому в совершенстве владеют всеми современными объективными и субъективными методами диагностики, которые применяются в детском возрасте. На первичной консультации детский сурдолог проведет комплексное обследование слуха, выдаст заключение, и при наличии патологии слуха разработает индивидуальную программу реабилитации слуха у ребенка.",
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
         "title": "Tibbiy xizmatlar uchun narxlar",
         "text": "Minsk, Brest, Grodno, Vitebsk, Gomel, Mogilevda audiolog xizmatlari va eshitish diagnostikasi narxlarining to'liq ro'yxati."
     },
     {
         "id": 11,
         "link": "#",
-        "img": "/audiogramma_150_150-150x150.jpg.webp",
+        "main": false,
+        "img_post": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2024/12/service-baby-1600-100-1536x960.png.webp",
+        "post": "Детские сурдологи сети Центров хорошего слуха – профессионалы, специализирующиеся на обследовании слуха у детей. В отличие от ЛОР-врачей, сурдологи занимаются исключительно проблемами уха и слуха, поэтому в совершенстве владеют всеми современными объективными и субъективными методами диагностики, которые применяются в детском возрасте. На первичной консультации детский сурдолог проведет комплексное обследование слуха, выдаст заключение, и при наличии патологии слуха разработает индивидуальную программу реабилитации слуха у ребенка.",
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
         "title": "Audiometriya",
         "text": "Audiometriya qanday va qanday hollarda amalga oshiriladi, audiogramma qanday dekodlanadi va u qanday natijalarni ko'rsatadi. Ohang, nutq va chegaradan yuqori audiogramma - farq nima."
     },
     {
         "id": 12,
         "link": "#",
-        "img": "/diagnostika-150-150.png.webp",
+        "main": true,
+        "img_post": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2024/12/service-baby-1600-100-1536x960.png.webp",
+        "post": "Детские сурдологи сети Центров хорошего слуха – профессионалы, специализирующиеся на обследовании слуха у детей. В отличие от ЛОР-врачей, сурдологи занимаются исключительно проблемами уха и слуха, поэтому в совершенстве владеют всеми современными объективными и субъективными методами диагностики, которые применяются в детском возрасте. На первичной консультации детский сурдолог проведет комплексное обследование слуха, выдаст заключение, и при наличии патологии слуха разработает индивидуальную программу реабилитации слуха у ребенка.",
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/konsultacia-detskogo-surdologa.jpg.webp",
         "title": "Kattalardagi eshitish diagnostikasi",
         "text": "Voyaga etgan odamning eshitish qobiliyatini baholash uchun audiologlar 10 dan ortiq audiologik testlarni o'tkazadilar. Diagnostika Interacoustics (Daniya) kompaniyasining eng yangi uskunalari yordamida amalga oshiriladi."
     }

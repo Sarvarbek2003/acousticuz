@@ -1,15 +1,19 @@
 import express, { NextFunction, Request, Response } from 'express'
 import path from 'path'
+import cors from 'cors'
 import 'reflect-metadata';
 import { ClientError } from './utils/error.handle'
 import service from './route/app.routes'
 import admin from './route/admin.routes'
 import * as dotenv from 'dotenv'
-dotenv.config(); 
-
+dotenv.config();
+ 
 const app = express()
+app.use(cors()) // Enable CORS
+app.use(express.json())   
 app.use(express.json())   
 app.use(express.static(path.join(process.cwd(), 'files')))
+
 
 app.use('/api', service)
 app.use('/admin/', admin)
