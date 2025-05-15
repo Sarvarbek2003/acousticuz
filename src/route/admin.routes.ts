@@ -21,13 +21,17 @@ router.post('/services', validateRequest, addService)
     .put('/doctor-cards/:id', validateRequest, updateDoctorCard)
     .delete('/doctor-cards/:id', validateRequest, deleteDoctorCard)
 
-    .post('about-cards', validateRequest, addAboutCards)
-    .put('about-cards/:id', validateRequest, updateAboutCards)
-    .delete('about-cards/:id', validateRequest, deleteAboutCards)
+    .post('/about-cards', validateRequest, addAboutCards)
+    .put('/about-cards/:id', validateRequest, updateAboutCards)
+    .delete('/about-cards/:id', validateRequest, deleteAboutCards)
 
-    .post('catalog-cards', validateRequest, addCatalogCard)
-    .put('catalog-cards/:id', validateRequest, updateCatalogCard)
-    .delete('catalog-cards/:id', validateRequest, deleteCatalogCard)
+    .post('/catalog-cards', validateRequest, addCatalogCard)
+    .put('/catalog-cards/:id', validateRequest, updateCatalogCard)
+    .delete('/catalog-cards/:id', validateRequest, deleteCatalogCard)
+
+    .post('/hearing-tool', validateRequest, addCatalogCard)
+    .put('/hearing-tool/:id', validateRequest, updateCatalogCard)
+    .delete('/hearing-tool/:id', validateRequest, deleteCatalogCard)
     
 
 export default router

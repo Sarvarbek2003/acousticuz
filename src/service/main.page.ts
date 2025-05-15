@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import { readFileSync } from 'fs';
+import { link, readFileSync } from 'fs';
 import { join } from 'path';
 import { ClientError } from '../utils/error.handle';
 
@@ -25,24 +25,28 @@ const mainPage = (req: Request, res: Response, next: NextFunction) => {
         mainPage.push({
             title: services_dictonary[lang],
             layout: 'vertical',
-            data: mainservices.map(el => ({ id: el.id, title: el.title, descroption: el.text, image: el.img }))
+            link: 'services',
+            data: mainservices.map(el => ({ id: el.id, title: el.title, description: el.text, image: el.img }))
         })
 
         mainPage.push({
             title: child_dictonary[lang],
             layout: 'horizontal',
+            link: 'child',
             data: mainchild_cards.map(el => ({ id: el.id, title: el.title, description: el.text, image: el.img }))
         })
 
         mainPage.push({
             title: catalog_dictonary[lang],
             layout: 'horizontal',
+            link:'catalog',
             data: maincategory_cards.map(el => ({ id: el.id, title: el.title, description: el.text, image: el.img }))
         })
 
         mainPage.push({
             title: mission_dictonary[lang],
             layout: 'vertical',
+            link:'about',
             data: mainabout_cards.map(el => ({ id: el.id, title: el.title, description: el.text, image: el.img }))
         })
 

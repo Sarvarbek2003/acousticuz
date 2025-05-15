@@ -6,6 +6,7 @@ import { CreateServiceDto, ParamId, UpdateServiceDto } from '../service/dto/serv
 import { CreateAboutCardsDto, UpdateAboutCardsDto } from '../service/dto/about.cards.dto';
 import { CreateCatalogCardsDto, UpdateCatalogCardsDto } from '../service/dto/catalog.cards.dto';
 import { CreateDoctorDto, UpdateDoctorDto } from '../service/dto/doctor.cards.dto';
+import { CreateHearingToolDto, UpdateHearingToolDto } from '../service/dto/hearing.tool';
 
 
 const paths = {
@@ -29,6 +30,10 @@ const paths = {
     '/catalog-cards/:id-PUT-body': UpdateCatalogCardsDto,
     '/catalog-cards/:id-PUT-param': ParamId,
     '/catalog-cards/:id-DELETE-param': ParamId,
+    '/hearing-tools-POST-body': CreateHearingToolDto,
+    '/hearing-tools/:id-PUT-body': UpdateHearingToolDto,
+    '/hearing-tools/:id-PUT-param': ParamId,
+    '/hearing-tools/:id-DELETE-param': ParamId,
 }
 
 export function validateRequest(req: Request, res: Response, next: NextFunction): any {
