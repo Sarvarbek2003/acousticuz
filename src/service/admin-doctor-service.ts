@@ -5,6 +5,36 @@ import { ClientError } from "../utils/error.handle";
 import { CreateDoctorDto } from "./dto/doctor.cards.dto";
 import { ParamId } from "./dto/services.dto";
 
+const getDoctorCard = (req: Request, res: Response, next: NextFunction) => {
+    try {
+        let { id } = req.params as unknown as ParamId
+        let result_uz = JSON.parse(readFileSync(join(process.cwd(), 'database', 'doctor_cards', `ru.json`), 'utf-8'))
+        let result_ru = JSON.parse(readFileSync(join(process.cwd(), 'database', 'doctor_cards', `uz.json`), 'utf-8'))
+        
+        result_uz = result_uz.find(el => el.id == id)
+        result_ru = result_ru.find(el => el.id == id)
+
+
+        res.status(200).json({
+            ...result_uz,
+            doctorsName: {
+                uz: result_uz.doctorsName,
+                ru: result_ru.doctorsName
+            },
+            aboutDoctor:{
+                uz: result_uz.aboutDoctor,
+                ru: result_ru.aboutDoctor
+            },
+            experience: {
+                uz: result_uz.experience,
+                ru: result_ru.experience
+            }
+        })
+    } catch (error) {
+        next(new ClientError(error.message, 403))
+    }
+}
+
 const addDoctorCard = (req: Request, res: Response, next: NextFunction) => {
     const {
         link,
@@ -112,6 +142,7 @@ const deleteDoctorCard = (req: Request, res: Response, next: NextFunction) => {
 
 
 export {
+    getDoctorCard,
     addDoctorCard,
     updateDoctorCard,
     deleteDoctorCard

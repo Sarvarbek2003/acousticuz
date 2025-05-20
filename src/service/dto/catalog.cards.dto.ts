@@ -7,9 +7,17 @@ export class CreateCatalogCardsDto {
     @IsNotEmpty()
     img: string;
 
+    @IsString()
+    @IsNotEmpty()
+    img_post: string;
+
     @ValidateNested({ each: true })
     @Type(() => MessageModel)
     title: MessageModel;
+    
+    @ValidateNested({ each: true })
+    @Type(() => MessageModel)
+    post: MessageModel;
 
     @ValidateNested({ each: true })
     @Type(() => MessageModel)
@@ -25,6 +33,10 @@ export class UpdateCatalogCardsDto {
     img?: string;
 
     @IsOptional()
+    @IsString()
+    img_post?: string;
+
+    @IsOptional()
     @ValidateNested({ each: true })
     @Type(() => MessageModel)
     title?: MessageModel;
@@ -33,6 +45,11 @@ export class UpdateCatalogCardsDto {
     @ValidateNested({ each: true })
     @Type(() => MessageModel)
     text?: MessageModel;
+
+    @IsOptional()
+    @ValidateNested({ each: true })
+    @Type(() => MessageModel)
+    post?: MessageModel;
 
     @IsOptional()
     @IsString()

@@ -6,12 +6,43 @@ import { CreateDoctorDto } from "./dto/doctor.cards.dto";
 import { ParamId } from "./dto/services.dto";
 import { CreateCatalogCardsDto, UpdateCatalogCardsDto } from "./dto/catalog.cards.dto";
 
+const getCatalogCard = (req: Request, res: Response, next: NextFunction) => {
+    try {
+        let { id } = req.params as unknown as ParamId
+        let result_uz = JSON.parse(readFileSync(join(process.cwd(), 'database', 'catalogcards', `ru.json`), 'utf-8'))
+        let result_ru = JSON.parse(readFileSync(join(process.cwd(), 'database', 'catalogcards', `uz.json`), 'utf-8'))
+        result_uz = result_uz.find(el => el.id == id)
+        result_ru = result_ru.find(el => el.id == id)
+
+
+        res.status(200).json({
+            ...result_uz,
+            title:{
+                uz: result_uz.title,
+                ru: result_ru.title
+            },
+            text: {
+                uz: result_uz.text,
+                ru: result_ru.text
+            },
+            post: {
+                uz: result_uz.text,
+                ru: result_ru.text
+            }
+        })
+    } catch (error) {
+        next(new ClientError(error.message, 403))
+    }
+}
+
 const addCatalogCard = (req: Request, res: Response, next: NextFunction) => {
     const {
         link,
         img,
         text,
-        title
+        title,
+        post,
+        img_post
     } = req.body as CreateCatalogCardsDto
 
     try {
@@ -23,6 +54,8 @@ const addCatalogCard = (req: Request, res: Response, next: NextFunction) => {
             link: link,
             img: img,
             title: title['ru'],
+            post: post['ru'],
+            img_post: img_post,
             text: text['ru'],
         })
         let result_uz = JSON.parse(readFileSync(join(process.cwd(), 'database', 'catalogcards', `uz.json`), 'utf-8'))
@@ -32,6 +65,8 @@ const addCatalogCard = (req: Request, res: Response, next: NextFunction) => {
             link: link,
             img: img,
             title: title['uz'],
+            img_post: img_post,
+            post: post['uz'],
             text: text['uz'],
         })
 
@@ -49,7 +84,9 @@ const updateCatalogCard = (req: Request, res: Response, next: NextFunction) => {
         link,
         img,
         title,
-        text
+        text,
+        img_post,
+        post
     } = req.body as UpdateCatalogCardsDto
 
     const { id } = req.params as unknown as ParamId
@@ -64,6 +101,8 @@ const updateCatalogCard = (req: Request, res: Response, next: NextFunction) => {
                 el.img = (img ? img : el.img),
                 el.title = (title ? title['ru'] : el.title)
                 el.text = (text ? text['ru'] : el.text)
+                el.post = (post ? post['ru'] : el.post)
+                el.img_post = (img_post ? img_post : el.img_post)
                 el.link = (link ? link : el.link)
             }
         })
@@ -107,6 +146,7 @@ const deleteCatalogCard = (req: Request, res: Response, next: NextFunction) => {
 
 
 export {
+    getCatalogCard,
     addCatalogCard,
     updateCatalogCard,
     deleteCatalogCard

@@ -2,13 +2,45 @@ import { Request, Response, NextFunction } from "express";
 import { readFileSync, rmSync, writeFileSync } from "fs";
 import { join } from "path";
 import { ClientError } from "../utils/error.handle";
+import { ParamId } from "./dto/services.dto";
+
+const getService = (req: Request, res: Response, next: NextFunction) => {
+    try {
+        let { id } = req.params as unknown as ParamId
+        let result_uz = JSON.parse(readFileSync(join(process.cwd(), 'database', 'services', `ru.json`), 'utf-8'))
+        let result_ru = JSON.parse(readFileSync(join(process.cwd(), 'database', 'services', `uz.json`), 'utf-8'))
+        result_uz = result_uz.find(el => el.id == id)
+        result_ru = result_ru.find(el => el.id == id)
+
+
+        res.status(200).json({
+            ...result_uz,
+            title:{
+                uz: result_uz.title,
+                ru: result_ru.title
+            },
+            text: {
+                uz: result_uz.text,
+                ru: result_ru.text
+            },
+            post: {
+                uz: result_uz.text,
+                ru: result_ru.text
+            }
+        })
+    } catch (error) {
+        next(new ClientError(error.message, 403))
+    }
+}
 
 const addService = (req: Request, res: Response, next: NextFunction) => {
     const {
         link,
         img,
         title,
-        text
+        text,
+        img_post,
+        post
     } = req.body
 
     try {
@@ -19,6 +51,8 @@ const addService = (req: Request, res: Response, next: NextFunction) => {
             id: result_ru.at(-1).id ? result_ru.at(-1).id + 1 : 1,
             link: link,
             img: img,
+            img_post: img_post,
+            post: post['ru'],
             title: title['ru'],
             text: text['ru']
         })
@@ -28,6 +62,8 @@ const addService = (req: Request, res: Response, next: NextFunction) => {
             id: result_uz.at(-1).id ? result_uz.at(-1).id + 1 : 1,
             link: link,
             img: img,
+            img_post: img_post,
+            post: post['uz'],
             title: title['uz'],
             text: text['uz']
         })
@@ -46,7 +82,9 @@ const updateService = (req: Request, res: Response, next: NextFunction) => {
         link,
         img,
         title,
-        text
+        text,
+        post,
+        img_post
     } = req.body
 
     const { id } = req.params
@@ -62,6 +100,8 @@ const updateService = (req: Request, res: Response, next: NextFunction) => {
                 el.title = (title ? title['ru'] : el.title)
                 el.text = (text ? text['ru'] : el.text)
                 el.link = (link ? link : el.link)
+                el.post = (post ? post['ru'] : el.post)
+                el.img_post = (img_post ? img_post : el.img_post)
             }
         })
         result_uz.map(el => {
@@ -70,6 +110,8 @@ const updateService = (req: Request, res: Response, next: NextFunction) => {
                 el.title = (title ? title['uz'] : el.title)
                 el.text = (text ? text['uz'] : el.text)
                 el.link = (link ? link : el.link)
+                el.post = (post ? post['uz'] : el.post)
+                el.img_post = (img_post ? img_post : el.img_post)
             }
         })
 
@@ -104,6 +146,7 @@ const deleteService = (req: Request, res: Response, next: NextFunction) => {
 
 
 export {
+    getService,
     addService,
     updateService,
     deleteService

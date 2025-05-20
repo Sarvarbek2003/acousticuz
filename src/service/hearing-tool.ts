@@ -7,6 +7,32 @@ import { ParamId } from "./dto/services.dto";
 import { CreateCatalogCardsDto, UpdateCatalogCardsDto } from "./dto/catalog.cards.dto";
 import { CreateHearingToolDto, UpdateHearingToolDto } from "./dto/hearing.tool";
 
+const getHearingTool = (req: Request, res: Response, next: NextFunction) => {
+    try {
+        let { id } = req.params as unknown as ParamId
+        let result_uz = JSON.parse(readFileSync(join(process.cwd(), 'database', 'hearing_tools', `ru.json`), 'utf-8'))
+        let result_ru = JSON.parse(readFileSync(join(process.cwd(), 'database', 'hearing_tools', `uz.json`), 'utf-8'))
+        result_uz = result_uz.find(el => el.id == id)
+        result_ru = result_ru.find(el => el.id == id)
+
+
+        res.status(200).json({
+            ...result_uz,
+            name:{
+                uz: result_uz.name,
+                ru: result_ru.name
+            },
+            description: {
+                uz: result_uz.description,
+                ru: result_ru.description
+            }
+        })
+    } catch (error) {
+        next(new ClientError(error.message, 403))
+    }
+}
+
+
 const addHearingTool = (req: Request, res: Response, next: NextFunction) => {
     const {
         img,
@@ -121,6 +147,7 @@ const deleteHearingTool = (req: Request, res: Response, next: NextFunction) => {
 
 
 export {
+    getHearingTool,
     addHearingTool,
     updateHearingTool,
     deleteHearingTool

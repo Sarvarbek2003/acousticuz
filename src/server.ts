@@ -51,8 +51,8 @@ app.post('/upload', upload.single('file'), (req: Request, res: Response): any =>
 });
 
 
-app.use('/api', service)
 app.use('/admin/', admin)
+app.use('/api', service)
 
 app.use((err: ClientError, req: Request, res: Response, next?: NextFunction):any => {
     console.log(err);

@@ -2,13 +2,46 @@ import { Request, Response, NextFunction } from "express";
 import { readFileSync, rmSync, writeFileSync } from "fs";
 import { join } from "path";
 import { ClientError } from "../utils/error.handle";
+import { ParamId } from "./dto/services.dto";
+
+const getChildCard = (req: Request, res: Response, next: NextFunction) => {
+    try {
+        let { id } = req.params as unknown as ParamId
+        let result_uz = JSON.parse(readFileSync(join(process.cwd(), 'database', 'child_cards', `ru.json`), 'utf-8'))
+        let result_ru = JSON.parse(readFileSync(join(process.cwd(), 'database', 'child_cards', `uz.json`), 'utf-8'))
+        result_uz = result_uz.find(el => el.id == id)
+        result_ru = result_ru.find(el => el.id == id)
+
+
+        res.status(200).json({
+            ...result_uz,
+            title:{
+                uz: result_uz.title,
+                ru: result_ru.title
+            },
+            text: {
+                uz: result_uz.text,
+                ru: result_ru.text
+            },
+            post: {
+                uz: result_uz.text,
+                ru: result_ru.text
+            }
+        })
+    } catch (error) {
+        next(new ClientError(error.message, 403))
+    }
+}
+
 
 const addChildCard = (req: Request, res: Response, next: NextFunction) => {
     const {
         link,
         img,
         title,
-        text
+        text,
+        post,
+        img_post
     } = req.body
 
     try {
@@ -20,6 +53,8 @@ const addChildCard = (req: Request, res: Response, next: NextFunction) => {
             link: link,
             img: img,
             title: title['ru'],
+            post: post['ru'],
+            img_post:img_post,
             text: text['ru']
         })
         let result_uz = JSON.parse(readFileSync(join(process.cwd(), 'database', 'child_cards', `uz.json`), 'utf-8'))
@@ -28,6 +63,8 @@ const addChildCard = (req: Request, res: Response, next: NextFunction) => {
             id: result_uz.at(-1).id ? result_uz.at(-1).id + 1 : 1,
             link: link,
             img: img,
+            post: post['uz'],
+            img_post:img_post,
             title: title['uz'],
             text: text['uz']
         })
@@ -46,7 +83,9 @@ const updateChildCard = (req: Request, res: Response, next: NextFunction) => {
         link,
         img,
         title,
-        text
+        text,
+        post,
+        img_post
     } = req.body
 
     const { id } = req.params
@@ -62,6 +101,8 @@ const updateChildCard = (req: Request, res: Response, next: NextFunction) => {
                 el.title = (title ? title['ru'] : el.title)
                 el.text = (text ? text['ru'] : el.text)
                 el.link = (link ? link : el.link)
+                el.img_post = (img_post ? img_post : el.img_post)
+                el.post = (post ? post['ru'] : el.post)
             }
         })
         result_uz.map(el => {
@@ -104,6 +145,7 @@ const deleteChildCard = (req: Request, res: Response, next: NextFunction) => {
 
 
 export {
+    getChildCard,
     addChildCard,
     updateChildCard,
     deleteChildCard

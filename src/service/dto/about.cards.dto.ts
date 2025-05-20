@@ -14,9 +14,9 @@ export class CreateAboutCardsDto {
     @IsOptional()
     img_post: string;
 
-    @IsString()
-    @IsOptional()
-    post: string;
+    @ValidateNested({ each: true })
+    @Type(() => MessageModel)
+    post: MessageModel;
 
     @ValidateNested({ each: true })
     @Type(() => MessageModel)
@@ -43,8 +43,9 @@ export class UpdateAboutCardsDto {
     @IsOptional()
     img_post?: string;
 
-    @IsString()
     @IsOptional()
+    @ValidateNested({ each: true })
+    @Type(() => MessageModel)
     post?: string;
 
     @IsOptional()

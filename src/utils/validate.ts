@@ -13,26 +13,36 @@ const paths = {
     '/services-POST-body': CreateServiceDto,
     '/services/:id-PUT-body': UpdateServiceDto,
     '/services/:id-PUT-param': ParamId,
+    '/services/:id/admin-GET-param': ParamId,
     '/services/:id-DELETE-param': ParamId,
+
     '/about-cards-POST-body': CreateAboutCardsDto,
     '/about-cards/:id-PUT-body': UpdateAboutCardsDto,
     '/about-cards/:id-PUT-param': ParamId,
     '/about-cards/:id-DELETE-param': ParamId,
+
     '/child-cards-POST-body': CreateServiceDto,
     '/child-cards/:id-PUT-body': UpdateServiceDto,
     '/child-cards/:id-PUT-param': ParamId,
+    '/child-cards/:id/admin-GET-param': ParamId,
     '/child-cards/:id-DELETE-param': ParamId,
+
     '/doctor-cards-POST-body': CreateDoctorDto,
     '/doctor-cards/:id-PUT-body': UpdateDoctorDto,
     '/doctor-cards/:id-PUT-param': ParamId,
+    '/doctor-cards/:id/admin-GET-param': ParamId,
     '/doctor-cards/:id-DELETE-param': ParamId,
+
     '/catalog-cards-POST-body': CreateCatalogCardsDto,
     '/catalog-cards/:id-PUT-body': UpdateCatalogCardsDto,
     '/catalog-cards/:id-PUT-param': ParamId,
+    '/catalog-cards/:id/admin-GET-param': ParamId,
     '/catalog-cards/:id-DELETE-param': ParamId,
+
     '/hearing-tools-POST-body': CreateHearingToolDto,
     '/hearing-tools/:id-PUT-body': UpdateHearingToolDto,
     '/hearing-tools/:id-PUT-param': ParamId,
+    '/hearing-tools/:id/admin-GET-param': ParamId,
     '/hearing-tools/:id-DELETE-param': ParamId,
 }
 

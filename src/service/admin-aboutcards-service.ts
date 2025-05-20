@@ -5,16 +5,48 @@ import { ClientError } from "../utils/error.handle";
 import { CreateAboutCardsDto, UpdateAboutCardsDto } from "./dto/about.cards.dto";
 import { ParamId } from "./dto/services.dto";
 
+
+const getAboutCard = (req: Request, res: Response, next: NextFunction) => {
+    try {
+        let { id } = req.params as unknown as ParamId
+        let result_uz = JSON.parse(readFileSync(join(process.cwd(), 'database', 'aboutcards', `ru.json`), 'utf-8'))
+        let result_ru = JSON.parse(readFileSync(join(process.cwd(), 'database', 'aboutcards', `uz.json`), 'utf-8'))
+        result_uz = result_uz.find(el => el.id == id)
+        result_ru = result_ru.find(el => el.id == id)
+
+
+        res.status(200).json({
+            ...result_uz,
+            title:{
+                uz: result_uz.title,
+                ru: result_ru.title
+            },
+            text: {
+                uz: result_uz.text,
+                ru: result_ru.text
+            },
+            post: {
+                uz: result_uz.text,
+                ru: result_ru.text
+            }
+        })
+    } catch (error) {
+        next(new ClientError(error.message, 403))
+    }
+}
+
+
 const addAboutCards = (req: Request, res: Response, next: NextFunction) => {
     const {
         link,
         img,
         title,
-        text
+        text,
+        post,
+        img_post
     } = req.body as CreateAboutCardsDto
 
     try {
-        let lang = ['ru', 'uz'].includes(req.headers['accept-language']) ? req.headers['accept-language'] : 'ru'
         let result_ru = JSON.parse(readFileSync(join(process.cwd(), 'database', 'aboutcards', `ru.json`), 'utf-8'))
 
         result_ru.push({
@@ -22,6 +54,8 @@ const addAboutCards = (req: Request, res: Response, next: NextFunction) => {
             link: link,
             img: img,
             title: title['ru'],
+            post: post['ru'],
+            img_post: img_post,
             text: text['ru']
         })
         let result_uz = JSON.parse(readFileSync(join(process.cwd(), 'database', 'aboutcards', `uz.json`), 'utf-8'))
@@ -31,6 +65,8 @@ const addAboutCards = (req: Request, res: Response, next: NextFunction) => {
             link: link,
             img: img,
             title: title['uz'],
+            post: post['uz'],
+            img_post: img_post,
             text: text['uz']
         })
 
@@ -48,13 +84,14 @@ const updateAboutCards = (req: Request, res: Response, next: NextFunction) => {
         link,
         img,
         title,
-        text
+        text,
+        post,
+        img_post
     } = req.body as UpdateAboutCardsDto
 
     const { id } = req.params as unknown as ParamId
 
     try {
-        let lang = ['ru', 'uz'].includes(req.headers['accept-language']) ? req.headers['accept-language'] : 'ru'
         let result_ru = JSON.parse(readFileSync(join(process.cwd(), 'database', 'aboutcards', `ru.json`), 'utf-8'))
         let result_uz = JSON.parse(readFileSync(join(process.cwd(), 'database', 'aboutcards', `uz.json`), 'utf-8'))
 
@@ -63,6 +100,8 @@ const updateAboutCards = (req: Request, res: Response, next: NextFunction) => {
                 el.img = (img ? img : el.img),
                 el.title = (title ? title['ru'] : el.title)
                 el.text = (text ? text['ru'] : el.text)
+                el.post = (post ? post['ru'] : el.post)
+                el.img_post = (img_post ? img_post : el.img_post)
                 el.link = (link ? link : el.link)
             }
         })
@@ -71,6 +110,8 @@ const updateAboutCards = (req: Request, res: Response, next: NextFunction) => {
                 el.img = (img ? img : el.img),
                 el.title = (title ? title['uz'] : el.title)
                 el.text = (text ? text['uz'] : el.text)
+                el.post = (post ? post['uz'] : el.post)
+                el.img_post = (img_post ? img_post : el.img_post)
                 el.link = (link ? link : el.link)
             }
         })
@@ -106,6 +147,7 @@ const deleteAboutCards = (req: Request, res: Response, next: NextFunction) => {
 
 
 export {
+    getAboutCard,
     addAboutCards,
     updateAboutCards,
     deleteAboutCards
