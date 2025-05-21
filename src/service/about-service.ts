@@ -137,7 +137,44 @@ const hearingToolsById = (req: Request, res: Response, next: NextFunction) => {
     }
 }
 
+const hearingToolsByCompantId = (req: Request, res: Response, next: NextFunction) => {
+    try {
+        let { id } = req.params as unknown as ParamId
+        let lang = ['ru', 'uz'].includes(req.headers['accept-language']) ? req.headers['accept-language'] : 'ru'
+        let result = JSON.parse(readFileSync(join(process.cwd(), 'database', 'hearing_tools', `${lang}.json`), 'utf-8'))
+        result = result.filter(el => el.company_id == id)
+        res.status(200).json(result)
+    } catch (error) {
+        next(new ClientError(error.message, 403))
+    }
+}
+
+const company = (req: Request, res: Response, next: NextFunction) =>{
+    try {
+        let lang = ['ru', 'uz'].includes(req.headers['accept-language']) ? req.headers['accept-language'] : 'ru'
+        let result = JSON.parse(readFileSync(join(process.cwd(), 'database', 'company', `${lang}.json`), 'utf-8'))
+        res.status(200).json(result)
+    } catch (error) {
+        next(new ClientError(error.message, 403))
+    }
+}
+
+const companyById = (req: Request, res: Response, next: NextFunction) =>{
+    try {
+        let { id } = req.params as unknown as ParamId
+        let lang = ['ru', 'uz'].includes(req.headers['accept-language']) ? req.headers['accept-language'] : 'ru'
+        let result = JSON.parse(readFileSync(join(process.cwd(), 'database', 'company', `${lang}.json`), 'utf-8'))
+        result = result.find(el => el.id == id)
+        res.status(200).json(result)
+    } catch (error) {
+        next(new ClientError(error.message, 403))
+    }
+}
+
 export {
+    companyById,
+    hearingToolsByCompantId,
+    company,
     catalogCards,
     services,
     doctorCards,

@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express'
-import { aboutCards, aboutCardsById, catalogCards, catalogCardsById, childCards, childCardsById, doctorCards, doctorCardsById, hearingTools, hearingToolsById, services, servicesById } from '../service/about-service'
+import { aboutCards, aboutCardsById, catalogCards, catalogCardsById, childCards, childCardsById, company, companyById, doctorCards, doctorCardsById, hearingTools, hearingToolsByCompantId, hearingToolsById, services, servicesById } from '../service/about-service'
 import { banner, mainPage } from '../service/main.page'
 
 let router = express.Router()
@@ -14,7 +14,10 @@ router.get('/services', services)
     .get('/child-cards/:id', childCardsById)
     .get('/doctor-cards', doctorCards)
     .get('/doctor-cards/:id', doctorCardsById)
+    .get('/company', company)
+    .get('/company/:id', companyById)
     .get('/hearing-tool', hearingTools)
+    .get('/company/:id/hearing-tool', hearingToolsByCompantId)
     .get('/hearing-tool/:id', hearingToolsById)
     .get('/main', mainPage)
     .get('/banner', banner)

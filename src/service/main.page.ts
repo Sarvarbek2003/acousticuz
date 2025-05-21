@@ -7,6 +7,7 @@ const services_dictonary = { ru: 'Наши услуги', uz: 'Bizning xizmatlar
 const child_dictonary = { ru: 'Дети и слух', uz: 'Bolalar eshitish vositalari' }
 const catalog_dictonary = { ru: 'Каталог', uz: 'Katalog' }
 const mission_dictonary = { ru: 'Наша миссия', uz: 'Bizning vazifamiz' }
+const company_dictonary = { ru: 'Кохлеарные импланты Cochlear', uz: 'Кохлеарные импланты Cochlear' }
 
 const mainPage = (req: Request, res: Response, next: NextFunction) => {
     try {
@@ -15,6 +16,7 @@ const mainPage = (req: Request, res: Response, next: NextFunction) => {
         let child_cards: any[] = JSON.parse(readFileSync(join(process.cwd(), 'database', 'child_cards', `${lang}.json`), 'utf-8'))
         let category_cards: any[] = JSON.parse(readFileSync(join(process.cwd(), 'database', 'child_cards', `${lang}.json`), 'utf-8'))
         let about_cards: any[] = JSON.parse(readFileSync(join(process.cwd(), 'database', 'child_cards', `${lang}.json`), 'utf-8'))
+        let coompany: any[] = JSON.parse(readFileSync(join(process.cwd(), 'database', 'company', `${lang}.json`), 'utf-8'))
 
         let mainservices = services.filter(el => el.main)
         let mainchild_cards = child_cards.filter(el => el.main)
@@ -41,6 +43,13 @@ const mainPage = (req: Request, res: Response, next: NextFunction) => {
             layout: 'horizontal',
             link:'catalog',
             data: maincategory_cards.map(el => ({ id: el.id, title: el.title, description: el.text, image: el.img }))
+        })
+
+        mainPage.push({
+            title: company_dictonary[lang],
+            layout: 'horizontal',
+            link:'company',
+            data: coompany.map(el => ({ id: el.id, title: el.name, description: el.description, image: el.img }))
         })
 
         mainPage.push({

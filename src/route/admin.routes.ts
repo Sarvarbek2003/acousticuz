@@ -7,6 +7,7 @@ import { addChildCard, deleteChildCard, getChildCard, updateChildCard } from '..
 import { addDoctorCard, deleteDoctorCard, getDoctorCard, updateDoctorCard } from '../service/admin-doctor-service'
 import { addCatalogCard, deleteCatalogCard, getCatalogCard, updateCatalogCard } from '../service/admin-catalog-service'
 import { addHearingTool, deleteHearingTool, getHearingTool, updateHearingTool } from '../service/hearing-tool'
+import { addCompany, deleteCompany, getCompany, updateCompany } from '../service/company-service'
 
 let router = express.Router()
 
@@ -39,6 +40,11 @@ router.post('/services', validateRequest, addService)
     .put('/hearing-tool/:id', validateRequest, getHearingTool)
     .put('/hearing-tool/:id', validateRequest, updateHearingTool)
     .delete('/hearing-tool/:id', validateRequest, deleteHearingTool)
+
+    .post('/company', validateRequest, addCompany)
+    .put('/company/:id', validateRequest, getCompany)
+    .put('/company/:id', validateRequest, updateCompany)
+    .delete('/company/:id', validateRequest, deleteCompany)
     
 
 export default router

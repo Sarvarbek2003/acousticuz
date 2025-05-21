@@ -1,5 +1,5 @@
 import { Type } from "class-transformer"
-import { IsBoolean, IsOptional, IsString, ValidateNested } from "class-validator"
+import { IsBoolean, IsNumber, IsOptional, IsString, ValidateNested } from "class-validator"
 import { MessageModel } from "./services.dto"
 
 export class CreateHearingToolDto {
@@ -10,6 +10,8 @@ export class CreateHearingToolDto {
     name: string
     @IsString()
     price: string
+    @IsNumber()
+    company_id: number
     @IsString()
     madein: string
     @IsBoolean()
@@ -23,7 +25,6 @@ export class UpdateHearingToolDto {
     @IsString()
     @IsOptional()
     img?: string
-
     @IsOptional()
     @ValidateNested({ each: true })
     @Type(() => MessageModel)
@@ -31,6 +32,9 @@ export class UpdateHearingToolDto {
     @IsString()
     @IsOptional()
     price?: string
+    @IsNumber()
+    @IsOptional()
+    company_id: number
     @IsString()
     @IsOptional()
     madein?: string

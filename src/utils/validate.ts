@@ -7,13 +7,13 @@ import { CreateAboutCardsDto, UpdateAboutCardsDto } from '../service/dto/about.c
 import { CreateCatalogCardsDto, UpdateCatalogCardsDto } from '../service/dto/catalog.cards.dto';
 import { CreateDoctorDto, UpdateDoctorDto } from '../service/dto/doctor.cards.dto';
 import { CreateHearingToolDto, UpdateHearingToolDto } from '../service/dto/hearing.tool';
+import { CreateCompanyDto, UpdateCompanyDto } from '../service/dto/company.dto';
 
 
 const paths = {
     '/services-POST-body': CreateServiceDto,
     '/services/:id-PUT-body': UpdateServiceDto,
     '/services/:id-PUT-param': ParamId,
-    '/services/:id/admin-GET-param': ParamId,
     '/services/:id-DELETE-param': ParamId,
 
     '/about-cards-POST-body': CreateAboutCardsDto,
@@ -24,26 +24,28 @@ const paths = {
     '/child-cards-POST-body': CreateServiceDto,
     '/child-cards/:id-PUT-body': UpdateServiceDto,
     '/child-cards/:id-PUT-param': ParamId,
-    '/child-cards/:id/admin-GET-param': ParamId,
     '/child-cards/:id-DELETE-param': ParamId,
 
     '/doctor-cards-POST-body': CreateDoctorDto,
     '/doctor-cards/:id-PUT-body': UpdateDoctorDto,
     '/doctor-cards/:id-PUT-param': ParamId,
-    '/doctor-cards/:id/admin-GET-param': ParamId,
     '/doctor-cards/:id-DELETE-param': ParamId,
 
     '/catalog-cards-POST-body': CreateCatalogCardsDto,
     '/catalog-cards/:id-PUT-body': UpdateCatalogCardsDto,
     '/catalog-cards/:id-PUT-param': ParamId,
-    '/catalog-cards/:id/admin-GET-param': ParamId,
     '/catalog-cards/:id-DELETE-param': ParamId,
 
     '/hearing-tools-POST-body': CreateHearingToolDto,
     '/hearing-tools/:id-PUT-body': UpdateHearingToolDto,
     '/hearing-tools/:id-PUT-param': ParamId,
-    '/hearing-tools/:id/admin-GET-param': ParamId,
     '/hearing-tools/:id-DELETE-param': ParamId,
+
+    '/company-POST-body': CreateCompanyDto,
+    '/company/:id-PUT-body': UpdateCompanyDto,
+    '/company/:id-PUT-param': ParamId,
+    '/company/:id/hearing-tools-GET-param': ParamId,
+    '/company/:id-DELETE-param': ParamId,
 }
 
 export function validateRequest(req: Request, res: Response, next: NextFunction): any {

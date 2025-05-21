@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2023/04/frame-13.jpg.webp",
+        "img_post": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2024/08/cochlear-v-nalichii.png.webp",
+        "name": "Тестовая компания",
+        "description": "Тестовая компания для тестирования",
+        "post": "Тестовая компания для тестирования тестирования тестирования тестированиятестирования ",
+        "phone": "+7 (123) 456-78-90"
+    },
+    {
+        "id": 2,
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2023/04/frame-13.jpg.webp",
+        "img_post": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2024/08/cochlear-v-nalichii.png.webp",
+        "name": "Тестовая компания",
+        "description": "Тестовая компания для тестирования",
+        "post": "Тестовая компания для тестирования тестирования тестирования тестированиятестирования ",
+        "phone": "+7 (123) 456-78-90"
+    },
+    {
+        "id": 3,
+        "img": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2023/04/frame-13.jpg.webp",
+        "img_post": "https://sluh.by/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2024/08/cochlear-v-nalichii.png.webp",
+        "name": "Тестовая компания",
+        "description": "Тестовая компания для тестирования",
+        "post": "Тестовая компания для тестирования тестирования тестирования тестированиятестирования ",
+        "phone": "+7 (123) 456-78-90"
+    }
+]

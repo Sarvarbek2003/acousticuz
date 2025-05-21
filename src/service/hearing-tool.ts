@@ -40,7 +40,8 @@ const addHearingTool = (req: Request, res: Response, next: NextFunction) => {
         inCash,
         madein,
         name,
-        price
+        price,
+        company_id
     } = req.body as CreateHearingToolDto
 
     try {
@@ -53,6 +54,7 @@ const addHearingTool = (req: Request, res: Response, next: NextFunction) => {
             inCash,
             madein, 
             price,
+            company_id: company_id,
             name: name['ru'],
             description: description['ru']
             
@@ -66,6 +68,7 @@ const addHearingTool = (req: Request, res: Response, next: NextFunction) => {
             madein, 
             price,
             name: name['uz'],
+            company_id: company_id,
             description: description['uz']
         })
 
@@ -85,7 +88,8 @@ const updateHearingTool = (req: Request, res: Response, next: NextFunction) => {
         madein,
         name,
         price,
-        description
+        description,
+        company_id
     } = req.body as UpdateHearingToolDto
 
     const { id } = req.params as unknown as ParamId
@@ -102,6 +106,7 @@ const updateHearingTool = (req: Request, res: Response, next: NextFunction) => {
                 el.madein = (madein ? madein : el.madein)
                 el.name = (name ? name['ru'] : el.name)
                 el.price = (price ? price : el.price)
+                el.company_id = (company_id ? company_id : el.company_id)
                 el.description = (description ? description['ru'] : el.description)
             }
         })
@@ -112,6 +117,7 @@ const updateHearingTool = (req: Request, res: Response, next: NextFunction) => {
                 el.madein = (madein ? madein : el.madein)
                 el.name = (name ? name['uz'] : el.name)
                 el.price = (price ? price : el.price)
+                el.company_id = (company_id ? company_id : el.company_id)
                 el.description = (description ? description['uz'] : el.description)
             }
         })
