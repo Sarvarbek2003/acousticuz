@@ -36,10 +36,10 @@ const paths = {
     '/catalog-cards/:id-PUT-param': ParamId,
     '/catalog-cards/:id-DELETE-param': ParamId,
 
-    '/hearing-tools-POST-body': CreateHearingToolDto,
-    '/hearing-tools/:id-PUT-body': UpdateHearingToolDto,
-    '/hearing-tools/:id-PUT-param': ParamId,
-    '/hearing-tools/:id-DELETE-param': ParamId,
+    '/hearing-tool-POST-body': CreateHearingToolDto,
+    '/hearing-tool/:id-PUT-body': UpdateHearingToolDto,
+    '/hearing-tool/:id-PUT-param': ParamId,
+    '/hearing-tool/:id-DELETE-param': ParamId,
 
     '/company-POST-body': CreateCompanyDto,
     '/company/:id-PUT-body': UpdateCompanyDto,
