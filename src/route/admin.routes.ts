@@ -37,12 +37,12 @@ router.post('/services', validateRequest, addService)
     .delete('/catalog-cards/:id', validateRequest, deleteCatalogCard)
 
     .post('/hearing-tool', validateRequest, addHearingTool)
-    .put('/hearing-tool/:id', validateRequest, getHearingTool)
+    .get('/hearing-tool/:id', validateRequest, getHearingTool)
     .put('/hearing-tool/:id', validateRequest, updateHearingTool)
     .delete('/hearing-tool/:id', validateRequest, deleteHearingTool)
 
     .post('/company', validateRequest, addCompany)
-    .put('/company/:id', validateRequest, getCompany)
+    .get('/company/:id', validateRequest, getCompany)
     .put('/company/:id', validateRequest, updateCompany)
     .delete('/company/:id', validateRequest, deleteCompany)
     

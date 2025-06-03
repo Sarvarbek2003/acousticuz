@@ -8,8 +8,8 @@ import { ParamId } from "./dto/services.dto";
 const getDoctorCard = (req: Request, res: Response, next: NextFunction) => {
     try {
         let { id } = req.params as unknown as ParamId
-        let result_uz = JSON.parse(readFileSync(join(process.cwd(), 'database', 'doctor_cards', `ru.json`), 'utf-8'))
-        let result_ru = JSON.parse(readFileSync(join(process.cwd(), 'database', 'doctor_cards', `uz.json`), 'utf-8'))
+        let result_uz = JSON.parse(readFileSync(join(process.cwd(), 'database', 'doctor_cards', `uz.json`), 'utf-8'))
+        let result_ru = JSON.parse(readFileSync(join(process.cwd(), 'database', 'doctor_cards', `ru.json`), 'utf-8'))
         
         result_uz = result_uz.find(el => el.id == id)
         result_ru = result_ru.find(el => el.id == id)

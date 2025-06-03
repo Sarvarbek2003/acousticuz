@@ -48,7 +48,7 @@ const mainPage = (req: Request, res: Response, next: NextFunction) => {
         mainPage.push({
             title: company_dictonary[lang],
             layout: 'horizontal',
-            link:'company',
+            link:'catalog',
             data: coompany.map(el => ({ id: el.id, title: el.name, description: el.description, image: el.img }))
         })
 
