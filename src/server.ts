@@ -43,7 +43,7 @@ app.post('/upload', upload.single('file'), (req: Request, res: Response): any =>
         return res.status(400).json({ message: 'No file uploaded' });
     }
 
-    req.file.path = req.file.path.replace('/home/acoustic/files', process.env.STORAGE_URL)
+    req.file.path = req.file.path.replace('/var/wwww/backend.acoustic.uz/files', process.env.STORAGE_URL) ///
     res.status(200).json({
         message: 'File uploaded successfully',
         file: req.file,
