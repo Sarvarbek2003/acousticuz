@@ -26,8 +26,8 @@ const getAboutCard = (req: Request, res: Response, next: NextFunction) => {
                 ru: result_ru.text
             },
             post: {
-                uz: result_uz.text,
-                ru: result_ru.text
+                uz: result_uz.post,
+                ru: result_ru.post
             }
         })
     } catch (error) {
