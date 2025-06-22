@@ -40,7 +40,8 @@ const addService = (req: Request, res: Response, next: NextFunction) => {
         title,
         text,
         img_post,
-        post
+        post,
+        main
     } = req.body
 
     try {
@@ -52,6 +53,7 @@ const addService = (req: Request, res: Response, next: NextFunction) => {
             link: link,
             img: img,
             img_post: img_post,
+            main: main,
             post: post['ru'],
             title: title['ru'],
             text: text['ru']
@@ -62,6 +64,7 @@ const addService = (req: Request, res: Response, next: NextFunction) => {
             id: result_uz.at(-1).id ? result_uz.at(-1).id + 1 : 1,
             link: link,
             img: img,
+            main: main,
             img_post: img_post,
             post: post['uz'],
             title: title['uz'],
@@ -83,6 +86,7 @@ const updateService = (req: Request, res: Response, next: NextFunction) => {
         img,
         title,
         text,
+        main,
         post,
         img_post
     } = req.body
@@ -100,6 +104,7 @@ const updateService = (req: Request, res: Response, next: NextFunction) => {
                 el.title = (title ? title['ru'] : el.title)
                 el.text = (text ? text['ru'] : el.text)
                 el.link = (link ? link : el.link)
+                el.main = (main ? main : el.main)
                 el.post = (post ? post['ru'] : el.post)
                 el.img_post = (img_post ? img_post : el.img_post)
             }
@@ -110,6 +115,7 @@ const updateService = (req: Request, res: Response, next: NextFunction) => {
                 el.title = (title ? title['uz'] : el.title)
                 el.text = (text ? text['uz'] : el.text)
                 el.link = (link ? link : el.link)
+                el.main = (main ? main : el.main)
                 el.post = (post ? post['uz'] : el.post)
                 el.img_post = (img_post ? img_post : el.img_post)
             }

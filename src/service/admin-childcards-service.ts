@@ -41,6 +41,7 @@ const addChildCard = (req: Request, res: Response, next: NextFunction) => {
         title,
         text,
         post,
+        main,
         img_post
     } = req.body
 
@@ -55,6 +56,7 @@ const addChildCard = (req: Request, res: Response, next: NextFunction) => {
             title: title['ru'],
             post: post['ru'],
             img_post:img_post,
+            main:main,
             text: text['ru']
         })
         let result_uz = JSON.parse(readFileSync(join(process.cwd(), 'database', 'child_cards', `uz.json`), 'utf-8'))
@@ -64,8 +66,9 @@ const addChildCard = (req: Request, res: Response, next: NextFunction) => {
             link: link,
             img: img,
             post: post['uz'],
-            img_post:img_post,
             title: title['uz'],
+            img_post:img_post,
+            main:main,
             text: text['uz']
         })
 
@@ -85,6 +88,7 @@ const updateChildCard = (req: Request, res: Response, next: NextFunction) => {
         title,
         text,
         post,
+        main,
         img_post
     } = req.body
 
@@ -102,6 +106,7 @@ const updateChildCard = (req: Request, res: Response, next: NextFunction) => {
                 el.text = (text ? text['ru'] : el.text)
                 el.link = (link ? link : el.link)
                 el.img_post = (img_post ? img_post : el.img_post)
+                el.main = (main ? main : el.main)
                 el.post = (post ? post['ru'] : el.post)
             }
         })
@@ -111,6 +116,9 @@ const updateChildCard = (req: Request, res: Response, next: NextFunction) => {
                 el.title = (title ? title['uz'] : el.title)
                 el.text = (text ? text['uz'] : el.text)
                 el.link = (link ? link : el.link)
+                el.img_post = (img_post ? img_post : el.img_post)
+                el.main = (main ? main : el.main)
+                el.post = (post ? post['uz'] : el.post)
             }
         })
 

@@ -43,6 +43,7 @@ const addAboutCards = (req: Request, res: Response, next: NextFunction) => {
         title,
         text,
         post,
+        main,
         img_post
     } = req.body as CreateAboutCardsDto
 
@@ -54,6 +55,7 @@ const addAboutCards = (req: Request, res: Response, next: NextFunction) => {
             link: link,
             img: img,
             title: title['ru'],
+            main: main,
             post: post['ru'],
             img_post: img_post,
             text: text['ru']
@@ -64,6 +66,7 @@ const addAboutCards = (req: Request, res: Response, next: NextFunction) => {
             id: result_uz.at(-1).id ? result_uz.at(-1).id + 1 : 1,
             link: link,
             img: img,
+            main: main,
             title: title['uz'],
             post: post['uz'],
             img_post: img_post,
@@ -85,6 +88,7 @@ const updateAboutCards = (req: Request, res: Response, next: NextFunction) => {
         img,
         title,
         text,
+        main,
         post,
         img_post
     } = req.body as UpdateAboutCardsDto
@@ -102,6 +106,7 @@ const updateAboutCards = (req: Request, res: Response, next: NextFunction) => {
                 el.text = (text ? text['ru'] : el.text)
                 el.post = (post ? post['ru'] : el.post)
                 el.img_post = (img_post ? img_post : el.img_post)
+                el.main = (main ? main : el.main)
                 el.link = (link ? link : el.link)
             }
         })
@@ -112,6 +117,7 @@ const updateAboutCards = (req: Request, res: Response, next: NextFunction) => {
                 el.text = (text ? text['uz'] : el.text)
                 el.post = (post ? post['uz'] : el.post)
                 el.img_post = (img_post ? img_post : el.img_post)
+                el.main = (main ? main : el.main)
                 el.link = (link ? link : el.link)
             }
         })

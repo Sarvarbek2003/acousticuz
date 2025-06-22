@@ -1,5 +1,5 @@
 import { Type } from "class-transformer";
-import { IsNumberString, IsObject, IsOptional, IsString, ValidateNested } from "class-validator";
+import { IsBoolean, IsNumberString, IsObject, IsOptional, IsString, ValidateNested } from "class-validator";
 
 export class MessageModel {
     @IsString()
@@ -14,6 +14,10 @@ export class CreateServiceDto {
 
     @IsString()
     link: string
+    
+    @IsBoolean()
+    @IsOptional()
+    main:boolean
 
     @ValidateNested({ each: true })
     @Type(() => MessageModel)
@@ -32,6 +36,10 @@ export class UpdateServiceDto {
     @IsString()
     @IsOptional()
     link: string
+
+    @IsBoolean()
+    @IsOptional()
+    main:boolean
 
     @IsOptional()
     @ValidateNested({ each: true })

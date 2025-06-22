@@ -1,5 +1,5 @@
 import { Type } from 'class-transformer';
-import { IsString, IsNotEmpty, ValidateNested, IsOptional } from 'class-validator';
+import { IsString, IsNotEmpty, ValidateNested, IsOptional, IsBoolean } from 'class-validator';
 import { MessageModel } from './services.dto';
 
 export class CreateCatalogCardsDto {
@@ -10,6 +10,10 @@ export class CreateCatalogCardsDto {
     @IsString()
     @IsNotEmpty()
     img_post: string;
+
+    @IsBoolean()
+    @IsOptional()
+    main:boolean
 
     @ValidateNested({ each: true })
     @Type(() => MessageModel)
@@ -40,6 +44,10 @@ export class UpdateCatalogCardsDto {
     @ValidateNested({ each: true })
     @Type(() => MessageModel)
     title?: MessageModel;
+
+    @IsBoolean()
+    @IsOptional()
+    main:boolean
 
     @IsOptional()
     @ValidateNested({ each: true })

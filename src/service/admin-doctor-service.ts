@@ -41,7 +41,8 @@ const addDoctorCard = (req: Request, res: Response, next: NextFunction) => {
         img,
         doctorsName,
         aboutDoctor,
-        experience
+        experience,
+        main,
     } = req.body as CreateDoctorDto
 
     try {
@@ -52,6 +53,7 @@ const addDoctorCard = (req: Request, res: Response, next: NextFunction) => {
             id: result_ru.at(-1).id ? result_ru.at(-1).id + 1 : 1,
             link: link,
             img: img,
+            main: main,
             doctorsName: doctorsName['ru'],
             aboutDoctor: aboutDoctor['ru'],
             experience: experience['ru']
@@ -62,6 +64,7 @@ const addDoctorCard = (req: Request, res: Response, next: NextFunction) => {
             id: result_uz.at(-1).id ? result_uz.at(-1).id + 1 : 1,
             link: link,
             img: img,
+            main: main,
             doctorsName: doctorsName['uz'],
             aboutDoctor: aboutDoctor['uz'],
             experience: experience['uz']
@@ -82,6 +85,7 @@ const updateDoctorCard = (req: Request, res: Response, next: NextFunction) => {
         img,
         doctorsName,
         aboutDoctor,
+        main,
         experience
     } = req.body as CreateDoctorDto
 
@@ -95,6 +99,7 @@ const updateDoctorCard = (req: Request, res: Response, next: NextFunction) => {
         result_ru.map(el => {
             if(el.id == id) {
                 el.img = (img ? img : el.img),
+                el.main = (main ? main : el.main),
                 el.doctorsName = (doctorsName ? doctorsName['ru'] : el.doctorsName)
                 el.aboutDoctor = (aboutDoctor ? aboutDoctor['ru'] : el.aboutDoctor)
                 el.aboutDoctor = (experience ? experience['ru'] : el.experience)
@@ -104,6 +109,7 @@ const updateDoctorCard = (req: Request, res: Response, next: NextFunction) => {
         result_uz.map(el => {
             if(el.id == id) {
                 el.img = (img ? img : el.img),
+                el.main = (main ? main : el.main),
                 el.doctorsName = (doctorsName ? doctorsName['uz'] : el.doctorsName)
                 el.aboutDoctor = (aboutDoctor ? aboutDoctor['uz'] : el.aboutDoctor)
                 el.aboutDoctor = (experience ? experience['uz'] : el.experience)

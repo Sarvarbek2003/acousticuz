@@ -41,6 +41,7 @@ const addCatalogCard = (req: Request, res: Response, next: NextFunction) => {
         img,
         text,
         title,
+        main,
         post,
         img_post
     } = req.body as CreateCatalogCardsDto
@@ -56,6 +57,7 @@ const addCatalogCard = (req: Request, res: Response, next: NextFunction) => {
             title: title['ru'],
             post: post['ru'],
             img_post: img_post,
+            main: main,
             text: text['ru'],
         })
         let result_uz = JSON.parse(readFileSync(join(process.cwd(), 'database', 'catalogcards', `uz.json`), 'utf-8'))
@@ -66,6 +68,7 @@ const addCatalogCard = (req: Request, res: Response, next: NextFunction) => {
             img: img,
             title: title['uz'],
             img_post: img_post,
+            main: main,
             post: post['uz'],
             text: text['uz'],
         })
@@ -86,6 +89,7 @@ const updateCatalogCard = (req: Request, res: Response, next: NextFunction) => {
         title,
         text,
         img_post,
+        main,
         post
     } = req.body as UpdateCatalogCardsDto
 
@@ -103,6 +107,7 @@ const updateCatalogCard = (req: Request, res: Response, next: NextFunction) => {
                 el.text = (text ? text['ru'] : el.text)
                 el.post = (post ? post['ru'] : el.post)
                 el.img_post = (img_post ? img_post : el.img_post)
+                el.main = (main ? main : el.main)
                 el.link = (link ? link : el.link)
             }
         })
@@ -111,6 +116,9 @@ const updateCatalogCard = (req: Request, res: Response, next: NextFunction) => {
                 el.img = (img ? img : el.img),
                 el.title = (title ? title['uz'] : el.title)
                 el.text = (text ? text['uz'] : el.text)
+                el.post = (post ? post['uz'] : el.post)
+                el.img_post = (img_post ? img_post : el.img_post)
+                el.main = (main ? main : el.main)
                 el.link = (link ? link : el.link)
             }
         })

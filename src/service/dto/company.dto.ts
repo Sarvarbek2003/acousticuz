@@ -8,6 +8,9 @@ export class CreateCompanyDto {
     @ValidateNested({ each: true })
     @Type(() => MessageModel)
     img_post: MessageModel
+    @IsBoolean()
+    @IsOptional()
+    main:boolean
     @IsString()
     name: string
     @ValidateNested({ each: true })
@@ -31,6 +34,9 @@ export class UpdateCompanyDto {
     @IsOptional()
     @IsString()
     name: string
+    @IsBoolean()
+    @IsOptional()
+    main:boolean
     @IsOptional()
     @ValidateNested({ each: true })
     @Type(() => MessageModel)

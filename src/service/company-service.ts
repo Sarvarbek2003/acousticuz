@@ -42,6 +42,7 @@ const addCompany = (req: Request, res: Response, next: NextFunction) => {
         name,
         img_post,
         phone,
+        main,
         post
     } = req.body as CreateCompanyDto
 
@@ -56,6 +57,7 @@ const addCompany = (req: Request, res: Response, next: NextFunction) => {
             description: description['ru'],
             img_post: img_post['ru'],
             phone: phone,
+            main: main,
             post: post['ru']
         })
         let result_uz = JSON.parse(readFileSync(join(process.cwd(), 'database', 'company', `uz.json`), 'utf-8'))
@@ -67,6 +69,7 @@ const addCompany = (req: Request, res: Response, next: NextFunction) => {
             description: description['uz'],
             img_post: img_post['uz'],
             phone: phone,
+            main: main,
             post: post['uz']
         })
 
@@ -86,6 +89,7 @@ const updateCompany = (req: Request, res: Response, next: NextFunction) => {
         description,
         img_post,
         phone,
+        main,
         post
     } = req.body as UpdateCompanyDto
 
@@ -103,6 +107,7 @@ const updateCompany = (req: Request, res: Response, next: NextFunction) => {
                 el.post = (post ? post['ru'] : el.post)
                 el.img_post = (img_post ? img_post['ru'] : el.img_post)
                 el.phone = (phone ? phone : el.phone)
+                el.main = (main ? main : el.main)
                 el.description = (description ? description['ru'] : el.description)
             }
         })
@@ -113,6 +118,7 @@ const updateCompany = (req: Request, res: Response, next: NextFunction) => {
                 el.post = (post ? post['uz'] : el.post)
                 el.img_post = (img_post ? img_post['uz'] : el.img_post)
                 el.phone = (phone ? phone : el.phone)
+                el.main = (main ? main : el.main)
                 el.description = (description ? description['uz'] : el.description)
             }
         })

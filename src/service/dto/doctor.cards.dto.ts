@@ -1,5 +1,5 @@
 import { Type } from "class-transformer";
-import { IsOptional, IsString, ValidateNested } from "class-validator";
+import { IsBoolean, IsOptional, IsString, ValidateNested } from "class-validator";
 import { MessageModel } from "./services.dto";
 
 export class CreateDoctorDto {
@@ -9,6 +9,10 @@ export class CreateDoctorDto {
     @ValidateNested({ each: true })
     @Type(() => MessageModel)
     doctorsName: MessageModel;
+
+    @IsBoolean()
+    @IsOptional()
+    main:boolean
 
     @ValidateNested({ each: true })
     @Type(() => MessageModel)
@@ -31,6 +35,10 @@ export class UpdateDoctorDto {
     @ValidateNested({ each: true })
     @Type(() => MessageModel)
     doctorsName: MessageModel;
+
+    @IsBoolean()
+    @IsOptional()
+    main:boolean
 
     @IsOptional()
     @ValidateNested({ each: true })
