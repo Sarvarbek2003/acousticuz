@@ -20,8 +20,8 @@ dotenv.config();
  
 const app = express()
 app.use(cors()) // Enable CORS
-app.use(express.json())   
-app.use(express.json())   
+app.use(express.json({limit: '100mb'})) // Parse JSON bodies with a limit of 50mb
+app.use(express.urlencoded({ extended: true, limit: '100mb' })) // Parse URL-encoded bodies with a limit of 50mb
 app.use(express.static(path.join(process.cwd(), 'files')))
 
 // Configure multer for file uploads
