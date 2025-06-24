@@ -107,7 +107,7 @@ const updateCatalogCard = (req: Request, res: Response, next: NextFunction) => {
                 el.text = (text ? text['ru'] : el.text)
                 el.post = (post ? post['ru'] : el.post)
                 el.img_post = (img_post ? img_post : el.img_post)
-                el.main = (main ? main : el.main)
+                el.main = main
                 el.link = (link ? link : el.link)
             }
         })
@@ -118,7 +118,7 @@ const updateCatalogCard = (req: Request, res: Response, next: NextFunction) => {
                 el.text = (text ? text['uz'] : el.text)
                 el.post = (post ? post['uz'] : el.post)
                 el.img_post = (img_post ? img_post : el.img_post)
-                el.main = (main ? main : el.main)
+                el.main = main
                 el.link = (link ? link : el.link)
             }
         })

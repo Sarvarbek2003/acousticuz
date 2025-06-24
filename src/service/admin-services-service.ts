@@ -104,7 +104,7 @@ const updateService = (req: Request, res: Response, next: NextFunction) => {
                 el.title = (title ? title['ru'] : el.title)
                 el.text = (text ? text['ru'] : el.text)
                 el.link = (link ? link : el.link)
-                el.main = (main ? main : el.main)
+                el.main = main
                 el.post = (post ? post['ru'] : el.post)
                 el.img_post = (img_post ? img_post : el.img_post)
             }
@@ -115,7 +115,7 @@ const updateService = (req: Request, res: Response, next: NextFunction) => {
                 el.title = (title ? title['uz'] : el.title)
                 el.text = (text ? text['uz'] : el.text)
                 el.link = (link ? link : el.link)
-                el.main = (main ? main : el.main)
+                el.main = main
                 el.post = (post ? post['uz'] : el.post)
                 el.img_post = (img_post ? img_post : el.img_post)
             }

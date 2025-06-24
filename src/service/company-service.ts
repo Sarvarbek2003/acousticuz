@@ -107,7 +107,7 @@ const updateCompany = (req: Request, res: Response, next: NextFunction) => {
                 el.post = (post ? post['ru'] : el.post)
                 el.img_post = (img_post ? img_post['ru'] : el.img_post)
                 el.phone = (phone ? phone : el.phone)
-                el.main = (main ? main : el.main)
+                el.main = main
                 el.description = (description ? description['ru'] : el.description)
             }
         })
@@ -118,7 +118,7 @@ const updateCompany = (req: Request, res: Response, next: NextFunction) => {
                 el.post = (post ? post['uz'] : el.post)
                 el.img_post = (img_post ? img_post['uz'] : el.img_post)
                 el.phone = (phone ? phone : el.phone)
-                el.main = (main ? main : el.main)
+                el.main = main
                 el.description = (description ? description['uz'] : el.description)
             }
         })

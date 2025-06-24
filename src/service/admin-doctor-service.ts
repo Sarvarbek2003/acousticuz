@@ -99,7 +99,7 @@ const updateDoctorCard = (req: Request, res: Response, next: NextFunction) => {
         result_ru.map(el => {
             if(el.id == id) {
                 el.img = (img ? img : el.img),
-                el.main = (main ? main : el.main),
+                el.main = main,
                 el.doctorsName = (doctorsName ? doctorsName['ru'] : el.doctorsName)
                 el.aboutDoctor = (aboutDoctor ? aboutDoctor['ru'] : el.aboutDoctor)
                 el.aboutDoctor = (experience ? experience['ru'] : el.experience)
@@ -109,7 +109,7 @@ const updateDoctorCard = (req: Request, res: Response, next: NextFunction) => {
         result_uz.map(el => {
             if(el.id == id) {
                 el.img = (img ? img : el.img),
-                el.main = (main ? main : el.main),
+                el.main = main,
                 el.doctorsName = (doctorsName ? doctorsName['uz'] : el.doctorsName)
                 el.aboutDoctor = (aboutDoctor ? aboutDoctor['uz'] : el.aboutDoctor)
                 el.aboutDoctor = (experience ? experience['uz'] : el.experience)
