@@ -12,8 +12,9 @@ export class CreateHearingToolDto {
     price: string
     @IsNumber()
     company_id: number
-    @IsString()
-    madein: string
+    @IsNumber()
+    @IsOptional()
+    catalog_id?: number
     @IsBoolean()
     inCash: boolean
     @ValidateNested({ each: true })
@@ -35,9 +36,9 @@ export class UpdateHearingToolDto {
     @IsNumber()
     @IsOptional()
     company_id: number
-    @IsString()
+    @IsNumber()
     @IsOptional()
-    madein?: string
+    catalog_id?: number
     @IsBoolean()
     @IsOptional()
     inCash?: boolean

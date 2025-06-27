@@ -38,10 +38,10 @@ const addHearingTool = (req: Request, res: Response, next: NextFunction) => {
         img,
         description,
         inCash,
-        madein,
         name,
         price,
-        company_id
+        company_id,
+        catalog_id
     } = req.body as CreateHearingToolDto
 
     try {
@@ -52,8 +52,8 @@ const addHearingTool = (req: Request, res: Response, next: NextFunction) => {
             id: result_ru.at(-1).id ? result_ru.at(-1).id + 1 : 1,
             img: img,
             inCash,
-            madein, 
             price,
+            catalog_id:catalog_id,
             company_id: company_id,
             name: name['ru'],
             description: description['ru']
@@ -65,10 +65,10 @@ const addHearingTool = (req: Request, res: Response, next: NextFunction) => {
             id: result_uz.at(-1).id ? result_uz.at(-1).id + 1 : 1,
             img: img,
             inCash,
-            madein, 
             price,
             name: name['uz'],
             company_id: company_id,
+            catalog_id:catalog_id,
             description: description['uz']
         })
 
@@ -85,11 +85,11 @@ const updateHearingTool = (req: Request, res: Response, next: NextFunction) => {
     const {
         img,
         inCash,
-        madein,
         name,
         price,
         description,
-        company_id
+        company_id,
+        catalog_id
     } = req.body as UpdateHearingToolDto
 
     const { id } = req.params as unknown as ParamId
@@ -103,9 +103,9 @@ const updateHearingTool = (req: Request, res: Response, next: NextFunction) => {
             if(el.id == id) {
                 el.img = (img ? img : el.img),
                 el.inCash = (inCash ? inCash : el.inCash)
-                el.madein = (madein ? madein : el.madein)
                 el.name = (name ? name['ru'] : el.name)
                 el.price = (price ? price : el.price)
+                el.catalog_id = catalog_id ? catalog_id : el.catalog_id
                 el.company_id = (company_id ? company_id : el.company_id)
                 el.description = (description ? description['ru'] : el.description)
             }
@@ -114,9 +114,9 @@ const updateHearingTool = (req: Request, res: Response, next: NextFunction) => {
             if(el.id == id) {
                 el.img = (img ? img : el.img),
                 el.inCash = (inCash ? inCash : el.inCash)
-                el.madein = (madein ? madein : el.madein)
                 el.name = (name ? name['uz'] : el.name)
                 el.price = (price ? price : el.price)
+                el.catalog_id = catalog_id ? catalog_id : el.catalog_id
                 el.company_id = (company_id ? company_id : el.company_id)
                 el.description = (description ? description['uz'] : el.description)
             }
